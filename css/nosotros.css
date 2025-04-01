@@ -1,0 +1,155 @@
+/* Estilos para la página nosotros */
+.historia {
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  background-color: black;
+}
+
+.historia h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  z-index: 2;
+  text-shadow: 0 0 10px rgba(102, 34, 105, 0.4); /* glow suave */
+}
+
+.historia p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 2;
+  color: #f1f1f1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* VIDEO */
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.7);
+  transform: scale(1.05);
+}
+
+/* Overlay con degradado dinámico */
+.historia .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+  z-index: 1;
+}
+
+/* Espaciado y efecto cinematográfico */
+.titulo-espacial {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px #662269, 0 0 15px #662269, 0 0 20px rgba(102,34,105,0.2);
+  }
+  to {
+    text-shadow: 0 0 12px #a347b0, 0 0 25px #a347b0, 0 0 35px rgba(102,34,105,0.5);
+  }
+}
+
+
+
+.galeria-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.galeria-img-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 1rem;
+}
+
+.galeria-img-container:hover .galeria-img {
+  transform: scale(1.05);
+}
+
+.galeria-grid .big {
+  height: 100%;
+  min-height: 600px;
+}
+
+.galeria-grid .small {
+  height: 290px;
+}
+
+
+
+@media (max-width: 768px) {
+  .historia h2 {
+    font-size: 2rem;
+  }
+
+  .historia p {
+    font-size: 1rem;
+  }
+
+}
+
+#valoresTech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.valor-card {
+  background: rgba(255, 255, 255, 0.541); /* semi-transparente */
+  backdrop-filter: blur(18px); /* el blur fino fino */
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.valor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #662269b2 !important;
+}
+
+.valor-card i{
+  color: #662269b2 !important;
+}
+
+#valoresTech .col-md-4 {
+  display: flex;
+}
+

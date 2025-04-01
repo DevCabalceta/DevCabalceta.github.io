@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la historia y misión de TechShop, tu tienda de tecnología y moda preferida en Costa Rica.">
+  <title>Nosotros | TechShop</title>
+
+  <!-- Librerías -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nosotros.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav-header shadow-sm mb-0">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <h1 class="h4 m-0 fw-bold text-primary">TechShop</h1>
+      <nav class="d-flex flex-wrap gap-3">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="carrito.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="flex-grow-1">
+    <!-- Sección Historia con video de fondo -->
+    <section class="historia position-relative d-flex align-items-center justify-content-center text-white" style="min-height: 60vh;">
+      <!-- Video de fondo -->
+      <video src="img/nosotros.mp4" autoplay loop muted playsinline class="video-fondo"></video>
+      <!-- Capa oscura encima del video -->
+      <div class="overlay"></div>
+      <!-- Contenido -->
+      <div class="container text-center position-relative z-1" data-aos="fade-up">
+        <h2 class="display-5 fw-bold titulo-espacial">Nuestra Historia</h2>
+        <p class="lead mt-3">TechShop fue fundada en 2010 en San José por apasionados de la tecnología y la moda, con el objetivo de ofrecer productos de calidad y una experiencia de compra excepcional.</p>
+      </div>
+    </section>
+
+
+    <!-- Misión y Valores -->
+    <section class="py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-4">Nuestra Misión</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <p class="text-center">Proporcionar productos de moda, electrónicos y tecnológicos de alta calidad, acompañados de un servicio excepcional. Buscamos combinar innovación, accesibilidad y sostenibilidad para brindar una experiencia de compra completa y única.</p>
+            <div class="row text-center mt-5" id="valoresTech">
+              <div class="col-md-4 mb-4">
+                <div class="valor-card shadow-sm">
+                  <i class="fas fa-check-circle text-primary fa-2x mb-2"></i>
+                  <h6 class="fw-bold">Calidad Garantizada</h6>
+                  <p>Productos duraderos y de marcas reconocidas.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="valor-card shadow-sm">
+                  <i class="fas fa-rocket text-primary fa-2x mb-2"></i>
+                  <h6 class="fw-bold">Innovación</h6>
+                  <p>Siempre a la vanguardia de la tecnología.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="valor-card shadow-sm">
+                  <i class="fas fa-headset text-primary fa-2x mb-2"></i>
+                  <h6 class="fw-bold">Atención Personalizada</h6>
+                  <p>Soporte humano y acompañamiento en tu compra.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="valor-card shadow-sm">
+                  <i class="fas fa-lightbulb text-primary fa-2x mb-2"></i>
+                  <h6 class="fw-bold">Accesibilidad</h6>
+                  <p>Precios competitivos sin sacrificar calidad.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="valor-card shadow-sm">
+                  <i class="fas fa-leaf text-primary fa-2x mb-2"></i>
+                  <h6 class="fw-bold">Sostenibilidad</h6>
+                  <p>Comprometidos con prácticas responsables.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Visual Moderna -->
+    <section class="galeria py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-5">Nuestra Tienda</h2>
+
+        <div class="row g-4 galeria-grid">
+          <div class="col-md-6">
+            <div class="galeria-img-container big">
+              <img src="img/tienda/tienda1.jpg" alt="Tienda 1" class="galeria-img">
+            </div>
+          </div>
+          <div class="col-md-6 d-flex flex-column gap-4">
+            <div class="galeria-img-container small">
+              <img src="img/tienda/tienda2.jpg" alt="Tienda 2" class="galeria-img">
+            </div>
+            <div class="galeria-img-container small">
+              <img src="img/tienda/tienda3.jpg" alt="Tienda 3" class="galeria-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </section>
+
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/includes.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

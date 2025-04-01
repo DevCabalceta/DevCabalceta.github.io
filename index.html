@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechShop - Tu tienda de tecnología, moda y estilo" />
+  <meta name="keywords" content="techshop, tecnología, moda, ropa, electrónicos, joyería" />
+  <meta name="author" content="TechShop" />
+  <title>TechShop | Inicio</title>
+
+  <!-- CDNs de librerías -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav-header shadow-sm mb-0">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <h1 class="h4 m-0 fw-bold text-primary">TechShop</h1>
+      <nav class="d-flex flex-wrap gap-3">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="carrito.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class=" flex-grow-1 ">
+    <!-- Hero Banner -->
+    <section class="hero-banner py-5">
+      <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+        
+        <!-- Texto Hero -->
+        <div class="hero-text col-lg-6" data-aos="fade-up">
+          <small class="text-uppercase text-muted mb-2">TECHSHOP ECOMMERCE</small>
+          <h1 class="display-5 fw-bold text-dark">Compra tecnología y estilo con confianza</h1>
+          <p class="lead text-secondary mb-4">
+            Descubrí lo último en productos electrónicos, ropa y joyería. Explora TechShop, tu tienda digital con lo mejor de la moda y la tecnología.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="productos.html" class="btn btn-productos btn-lg">
+              <i class="fas fa-shopping-bag me-2"></i> Ver productos
+            </a>
+            <a href="nosotros.html" class="btn btn-conocenos btn-lg">
+              Conócenos
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen Hero -->
+        <div class="hero-img col-lg-5" data-aos="fade-left">
+          <div class="img-wrapper position-relative rounded-4 overflow-hidden shadow">
+            <img src="img/hero.jpg" alt="Imagen ecommerce" class="w-100 h-auto">
+            <button class="btn btn-lg btn-primary position-absolute top-50 start-50 translate-middle rounded-circle shadow" style="background-color: blueviolet;">
+              <i class="fas fa-play text-white"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Categorías Destacadas -->
+    <section class="py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-4">Categorías Destacadas</h2>
+        <div class="row" id="categorias"></div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-5" data-aos="fade-up">
+      <div class="container p-5 testimonials">
+        <h2 class="text-center mb-5">Lo que dicen nuestros clientes</h2>
+        <div class="glide" id="glideTestimonios">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="card p-4 testimonial-card">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" class="rounded-circle me-3" width="60" height="60" alt="Juan">
+                    <div>
+                      <h6 class="mb-0">Juan Pérez</h6>
+                      <small class="text-muted">Cliente TechShop</small>
+                    </div>
+                  </div>
+                  <p class="mb-0">Desde que descubrí TechShop, no he vuelto a comprar tecnología en otro lugar. Su atención es excelente.</p>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="card p-4 testimonial-card">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956" class="rounded-circle me-3" width="60" height="60" alt="Laura">
+                    <div>
+                      <h6 class="mb-0">Laura Fernández</h6>
+                      <small class="text-muted">Cliente TechShop</small>
+                    </div>
+                  </div>
+                  <p class="mb-0">La ropa y los accesorios que venden son de excelente calidad y modernos. ¡Me encantan!</p>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="card p-4 testimonial-card">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d" class="rounded-circle me-3" width="60" height="60" alt="Carlos">
+                    <div>
+                      <h6 class="mb-0">Carlos López</h6>
+                      <small class="text-muted">Cliente TechShop</small>
+                    </div>
+                  </div>
+                  <p class="mb-0">Tuve un problema con mi tablet y el soporte fue rápido y eficaz. Muy recomendados.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div id="footer"></div>
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/includes.js"></script>
+</body>
+</html>

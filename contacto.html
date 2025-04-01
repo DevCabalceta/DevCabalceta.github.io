@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto TechShop - Envíanos tus dudas, sugerencias o comentarios.">
+  <title>Contacto | TechShop</title>
+
+  <!-- Librerías -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav-header shadow-sm mb-0">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <h1 class="h4 m-0 fw-bold text-primary">TechShop</h1>
+      <nav class="d-flex flex-wrap gap-3">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="carrito.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <section class="py-5 flex-grow-1">
+    <!-- Formulario de Contacto Estilizado -->
+    <section class="py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-5">Contáctanos</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form id="formContacto" class="p-4 p-md-5 bg-white shadow rounded-4">
+              <div class="mb-4">
+                <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+                <input type="text" class="form-control input-fino" id="nombre" placeholder="Ingresa tu nombre" required>
+              </div>
+              <div class="mb-4">
+                <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
+                <input type="email" class="form-control input-fino" id="email" placeholder="ejemplo@email.com" required>
+              </div>
+              <div class="mb-4">
+                <label for="mensaje" class="form-label fw-semibold">Tu Mensaje</label>
+                <textarea class="form-control input-fino" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-fino w-100 mt-3">Enviar Mensaje</button>
+              <div class="mt-4 text-center" id="respuesta"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </section>
+
+  <!-- Información de Contacto Estilizada -->
+  <section class="info-contacto py-5">
+    <div class="container">
+      <h3 class="text-center mb-5 fw-bold text-dark">Información de contacto</h3>
+      <div class="row justify-content-center text-center">
+        <div class="col-md-4 mb-4">
+          <div class="contact-box shadow-sm p-4 rounded-4 h-100">
+            <i class="fas fa-phone fa-2x icono-contacto mb-3"></i>
+            <h6 class="fw-semibold">Teléfono</h6>
+            <p class="mb-0">+506 8765 4321</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="contact-box shadow-sm p-4 rounded-4 h-100">
+            <i class="fas fa-envelope fa-2x icono-contacto mb-3"></i>
+            <h6 class="fw-semibold">Correo Electrónico</h6>
+            <p class="mb-0">contacto@techshop.cr</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="contact-box shadow-sm p-4 rounded-4 h-100">
+            <i class="fas fa-map-marker-alt fa-2x icono-contacto mb-3"></i>
+            <h6 class="fw-semibold">Ubicación</h6>
+            <p class="mb-0">Avenida Central 456, Barrio Innovación, San José, Costa Rica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa Estático con Encabezado -->
+  <section class="mapa-ubicacion py-5">
+    <div class="container text-center mb-4">
+      <h3 class="fw-bold text-dark">
+        <i class="fas fa-map-marked-alt me-2 text-primary"></i>¿Dónde estamos ubicados?
+      </h3>
+      <p class="text-muted">Encuéntranos fácilmente en el corazón de San José</p>
+    </div>
+
+    <div class="container-fluid px-0">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0592782978996!2d-84.083333!3d9.933333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3c00d07cf11%3A0x52d3522fc4d4ef95!2sAvenida%20Central%20456%2C%20San%20Jos%C3%A9%2C%20Costa%20Rica!5e0!3m2!1ses-419!2scr!4v1711825900000!5m2!1ses-419!2scr"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/contacto.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/includes.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

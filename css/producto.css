@@ -1,0 +1,209 @@
+/* Estilos específicos para el detalle del producto */
+#detalleProducto img {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 1rem;
+  }
+  
+  #detalleProducto h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  #detalleProducto p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  #detalleProducto .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease ;
+  }
+  
+  #detalleProducto .btn-success:hover {
+    background-color: #662269;
+    border-color: #662269;
+    box-shadow: 0 0 20px #662269b2;
+  }
+  
+  @media (max-width: 768px) {
+    #detalleProducto {
+      text-align: center;
+    }
+  
+    #detalleProducto img {
+      margin-bottom: 2rem;
+    }
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main, section.flex-grow-1 {
+    flex-grow: 1;
+  }
+  /* Prevenir salto visual por SweetAlert2 */
+body.swal2-shown {
+  overflow-y: auto !important;
+  padding-right: 0 !important;
+}
+
+/* Sección Productos Relacionados */
+#relacionados {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* Fade lateral */
+#relacionados::before,
+#relacionados::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#relacionados::before {
+  left: 0;
+  background: linear-gradient(to right, #f9e3f1, transparent);
+}
+
+#relacionados::after {
+  right: 0;
+  background: linear-gradient(to left, #e5eaf6, transparent);
+}
+
+/* Títulos */
+#relacionados h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#relacionados p.text-muted {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Carrusel */
+#relacionados .glide__slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta */
+#relacionados .card {
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #ffffffaf !important;
+  backdrop-filter: blur(18px) !important; /* el blur fino fino */
+  -webkit-backdrop-filter: blur(18px) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Efecto tipo Apple al hacer hover */
+#relacionados .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(102, 34, 105, 0.15),
+              0 6px 6px rgba(102, 34, 105, 0.1);
+}
+
+/* Imagen */
+#relacionados .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid #eee;
+  background-color: #ffffff;
+}
+
+#relacionados .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Cuerpo de la tarjeta */
+#relacionados .card-body {
+  height: 180px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título del producto */
+#relacionados .card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1b1b1b;
+  margin-bottom: 0.5rem;
+}
+
+/* Botón personalizado con efecto pulse */
+#relacionados .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  align-self: flex-start;
+  background-color: #662269 !important;
+  border-color: #662269 !important;
+  color: #fff !important;
+  transition: all 0.2s ease-in-out;
+}
+
+#relacionados .btn:hover {
+  background-color: #501b52 !important;
+  border-color: #501b52 !important;
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(102, 34, 105, 0.2);
+}
+
+/* Flechas del carrusel */
+#relacionados .glide__arrow {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  transition: background-color 0.3s ease;
+  color: #333;
+}
+
+#relacionados .glide__arrow:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#relacionados .glide__arrow--left {
+  left: 10px;
+}
+
+#relacionados .glide__arrow--right {
+  right: 10px;
+}
+
+
+
+
+  

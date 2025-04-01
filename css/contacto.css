@@ -1,0 +1,94 @@
+/* Estilos específicos para la página de contacto */
+form {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+/* Inputs y Textarea */
+.input-fino {
+  border: 1px solid #ccc;
+  border-radius: 0.7rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.input-fino:focus {
+  border-color: #662269;
+  box-shadow: 0 0 0 0.2rem rgba(102, 34, 105, 0.15);
+  background-color: #fff;
+}
+
+/* Botón fino */
+.btn-fino {
+  background-color: #662269 !important;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 0.7rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-fino:hover {
+  background-color: #501b52 !important;
+  color: white;
+  transform: scale(1.02);
+}
+
+/* Mensaje de respuesta */
+#respuesta {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-fino {
+    width: 100%;
+  }
+}
+
+
+.info-contacto {
+  background: linear-gradient(to right, #f7f4f981, #e8e8f32c);
+}
+
+.contact-box {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(102, 34, 105, 0.1);
+}
+
+.icono-contacto {
+  color: #662269;
+  transition: transform 0.3s ease;
+}
+
+.contact-box:hover .icono-contacto {
+  transform: scale(1.2);
+}
+
+.mapa-ubicacion h3 {
+  font-size: 1.8rem;
+  color: #1b1b1b;
+}
+
+.mapa-ubicacion .text-primary {
+  color: #662269 !important;
+}
+
+.mapa-ubicacion iframe {
+  border-top: 5px solid #662269;
+  border-bottom: 5px solid #662269;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

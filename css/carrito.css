@@ -1,0 +1,40 @@
+/* Tarjetas de carrito */
+.carrito-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrito-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(102, 34, 105, 0.1);
+}
+
+.carrito-card h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.carrito-card .card-text {
+  font-size: 1rem;
+}
+
+.btn-outline-danger {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .carrito-card img {
+    max-height: 100px;
+  }
+
+  .carrito-card h6 {
+    font-size: 0.9rem;
+  }
+
+  .carrito-card .card-text {
+    font-size: 0.9rem;
+  }
+}

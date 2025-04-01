@@ -1,0 +1,85 @@
+/* Estilos específicos para productos */
+#filtroCategorias button {
+  transition: all 0.3s ease;
+  border-color: #662269;
+  color: rgb(36, 36, 36);
+}
+
+#filtroCategorias button:hover {
+  transform: scale(1.05);
+  background-color: #662269;
+  border-color: #662269;
+  box-shadow: 0 0 12px #6622698f;
+  color: white;
+}
+
+#filtroCategorias .btn.active {
+  background-color: #662269;
+  color: white;
+  border-color: #662269;
+  box-shadow: 0 0 12px #6622698f;
+}
+
+
+.card h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.card .btn {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  background-color: #662269;
+}
+
+.card .btn:hover{
+  box-shadow: 0 0 20px #662269b2;
+}
+
+@media (max-width: 768px) {
+  #filtroCategorias {
+    flex-wrap: wrap;
+  }
+
+  #filtroCategorias button {
+    margin-bottom: 0.5rem;
+  }
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Efecto zoom solo dentro del área */
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+.card {
+  background-color: #ffffffda;
+  backdrop-filter: blur(10px); /* el blur fino fino */
+  -webkit-backdrop-filter: blur(18px); 
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+.img-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #ffffff85;
+  backdrop-filter: blur(10px); /* el blur fino fino */
+  -webkit-backdrop-filter: blur(18px); 
+  padding: 1rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
