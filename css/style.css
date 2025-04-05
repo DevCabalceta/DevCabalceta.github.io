@@ -86,25 +86,9 @@ body {
     }
   }
   
-  @media (max-width: 576px) {
-    nav a {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-  }
+
 /* NAV HEADER */
-.logo-img {
-  max-height: 80px;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-  display: block;
-}
-
-
-
 .nav-header {
-  min-height: 70px; /* ajustable si usás 60px o 72px */
   background-color: #ffffff5b;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -112,24 +96,24 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
-  align-items: center;
 }
 
-
-.nav-header h1 {
-  color: #662269 !important;
+/* LOGO */
+.logo-img {
+  height: 80px;
+  object-fit: contain;
 }
 
-.nav-header nav a.nav-link {
+/* NAV ENLACES */
+.nav-link {
   color: #2b2a2a;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease;
   position: relative;
+  transition: all 0.3s ease;
 }
 
-.nav-header nav a.nav-link::after {
+.nav-link::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -140,65 +124,65 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-header nav a.nav-link:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
-@media (max-width: 991.98px) {
+
+.nav-link:hover {
+  color: #662269;
+}
+
+/* HAMBURGUESA */
+.navbar-toggler {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  margin-left: auto;
+  z-index: 1100;
+  padding: 0.25rem;
+}
+
+/* MENÚ MÓVIL */
+.mobile-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.mobile-menu.menu-visible {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ENLACES DEL MENÚ MÓVIL */
+.mobile-menu .nav-link {
+  padding: 0.75rem 0;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 42px;
+  }
+
   .nav-header nav a.nav-link::after {
     display: none !important;
   }
 }
 
-.nav-header nav a.nav-link:hover {
-  color: #662269;
-}
 
-/* BOTÓN HAMBURGUESA */
-.navbar-toggler {
-  background: none;
-  border: none;
-  padding: 0.25rem;
-}
 
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* MENÚ MÓVIL flotante con animación */
-.mobile-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #ffffffec;
-  z-index: 999;
-  transform: translateY(-20px);
-  opacity: 0;
-  pointer-events: none;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  border-radius: 0 0 10px 10px;
-}
-
-/* Cuando se activa */
-.mobile-menu.menu-visible {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Links del menú móvil */
-.mobile-menu .nav-link {
-  font-weight: 500;
-  color: #2b2a2a;
-  padding: 0.6rem 0;
-  transition: color 0.2s;
-  display: block;
-}
-
-.mobile-menu .nav-link:hover {
-  color: #662269;
-}
 
 
 /* Hero Banner */

@@ -8,10 +8,11 @@ function obtenerCategoriaSeleccionada() {
 // Mostrar nombre formateado
 const mostrarBonito = (categoria) => {
   return categoria
-    .replace("men's clothing", "Men's Clothing")
-    .replace("women's clothing", "Women's Clothing")
-    .replace("electronics", "Electronics")
-    .replace("jewelery", "Jewelery");
+    
+    .replace("women's clothing", "Ropa de mujer")
+    .replace("men's clothing", "Ropa de hombre")
+    .replace("electronics", "Electrónica")
+    .replace("jewelery", "Joyería");
 };
 
 // Renderizar productos

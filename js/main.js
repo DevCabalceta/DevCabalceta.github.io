@@ -17,10 +17,10 @@ new Glide('#glideTestimonios', {
 // Mostrar nombres 
 const mostrarBonito = (categoria) => {
   return categoria
-    .replace("men's clothing", "Men's Clothing")
-    .replace("women's clothing", "Women's Clothing")
-    .replace("electronics", "Electronics")
-    .replace("jewelery", "Jewelery");
+  .replace("women's clothing", "Ropa de mujer")
+  .replace("men's clothing", "Ropa de hombre")
+  .replace("electronics", "Electrónica")
+  .replace("jewelery", "Joyería");
 };
 
 // Obtener imagen personalizada según categoría
@@ -38,6 +38,8 @@ const obtenerImagenCategoria = (categoria) => {
       return "https://picsum.photos/400/300"; // por si acaso
   }
 };
+
+
 
 // Cargar dinámicamente las categorías desde la API
 $(document).ready(function () {
@@ -65,22 +67,28 @@ document.addEventListener('DOMContentLoaded', function () {
   const iconoMenu = document.getElementById('iconoMenu');
 
   btnMenu.addEventListener('click', function () {
-    mobileMenu.classList.toggle('menu-visible');
-    mobileMenu.classList.toggle('d-none');
-    iconoMenu.classList.toggle('fa-bars');
-    iconoMenu.classList.toggle('fa-times'); // Ícono de X
+    const isVisible = mobileMenu.classList.contains('menu-visible');
+
+    if (isVisible) {
+      mobileMenu.classList.remove('menu-visible');
+      iconoMenu.classList.remove('fa-times');
+      iconoMenu.classList.add('fa-bars');
+    } else {
+      mobileMenu.classList.add('menu-visible');
+      iconoMenu.classList.remove('fa-bars');
+      iconoMenu.classList.add('fa-times');
+    }
   });
 
-  // Cerrar menú y restaurar ícono al hacer clic en un enlace
   document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('menu-visible');
-      mobileMenu.classList.add('d-none');
-      iconoMenu.classList.add('fa-bars');
       iconoMenu.classList.remove('fa-times');
+      iconoMenu.classList.add('fa-bars');
     });
   });
 });
+
 
 
 
