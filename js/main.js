@@ -14,7 +14,7 @@ new Glide('#glideTestimonios', {
   autoplay: 2000
 }).mount();
 
-// Mostrar nombres bonitos
+// Mostrar nombres 
 const mostrarBonito = (categoria) => {
   return categoria
     .replace("men's clothing", "Men's Clothing")
@@ -58,5 +58,33 @@ $(document).ready(function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const btnMenu = document.getElementById('btnMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const iconoMenu = document.getElementById('iconoMenu');
+
+  btnMenu.addEventListener('click', function () {
+    mobileMenu.classList.toggle('menu-visible');
+    mobileMenu.classList.toggle('d-none');
+    iconoMenu.classList.toggle('fa-bars');
+    iconoMenu.classList.toggle('fa-times'); // Ícono de X
+  });
+
+  // Cerrar menú y restaurar ícono al hacer clic en un enlace
+  document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('menu-visible');
+      mobileMenu.classList.add('d-none');
+      iconoMenu.classList.add('fa-bars');
+      iconoMenu.classList.remove('fa-times');
+    });
+  });
+});
+
+
+
+
+
 
 

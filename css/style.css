@@ -12,33 +12,20 @@ main, section.flex-grow-1 {
 }
 
 body {
-    font-family: "Segoe UI", sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #f9e3f1,
-    #ddcdec,
-    #deccf0,
-    #ffffff
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+    #fff5f7 0%,
+    #f8d6dc 30%,
+    #f6c6d4 60%,
+    #f3b6c8 100%
   );
-    background-size: 100% 400%;
-    background-attachment: fixed;
-    animation: fondoAnimado 15s ease infinite;
-    color: #333;
-  }
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+}
 
-  @keyframes fondoAnimado {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 0% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
+
   
   
   h1, h2, h3, h4, h5 {
@@ -105,18 +92,32 @@ body {
       margin-bottom: 0.5rem;
     }
   }
-  /* Header moderno */
+/* NAV HEADER */
+.logo-img {
+  max-height: 80px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+
 .nav-header {
+  min-height: 70px; /* ajustable si usás 60px o 72px */
   background-color: #ffffff5b;
-  backdrop-filter: blur(10px); /* el blur fino fino */
-  -webkit-backdrop-filter: blur(18px); 
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
 }
 
-.nav-header h1{
+
+.nav-header h1 {
   color: #662269 !important;
 }
 
@@ -142,10 +143,64 @@ body {
 .nav-header nav a.nav-link:hover::after {
   width: 100%;
 }
+@media (max-width: 991.98px) {
+  .nav-header nav a.nav-link::after {
+    display: none !important;
+  }
+}
 
 .nav-header nav a.nav-link:hover {
   color: #662269;
 }
+
+/* BOTÓN HAMBURGUESA */
+.navbar-toggler {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* MENÚ MÓVIL flotante con animación */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffffec;
+  z-index: 999;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Cuando se activa */
+.mobile-menu.menu-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Links del menú móvil */
+.mobile-menu .nav-link {
+  font-weight: 500;
+  color: #2b2a2a;
+  padding: 0.6rem 0;
+  transition: color 0.2s;
+  display: block;
+}
+
+.mobile-menu .nav-link:hover {
+  color: #662269;
+}
+
+
 /* Hero Banner */
 .hero-banner {
   padding-top: 5rem;
